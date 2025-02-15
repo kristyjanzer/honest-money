@@ -335,10 +335,9 @@ button {
 			border-radius: 50%;
 			background-color: $black;
 			position: absolute;
-			top: 50%;
+			top: 10px;
 			left: -10px;
-			transform: translateY(-50%);
-}
+		}
 	}
 
 	&--numbers {
