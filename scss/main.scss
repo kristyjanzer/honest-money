@@ -137,6 +137,20 @@ button {
 	&__offers {
 		margin-top: 52px;
 	}
+
+	&__info {
+		margin-top: 60px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
+		color: $black;
+
+		& + & {
+			margin-top: 20px;
+		}
+	}
 }
 
 .offers {
@@ -171,6 +185,7 @@ button {
 	&__mark {
 		margin-top: 18px;
 	}
+
 	&__block {
 		margin-top: 22px;
 		margin-bottom: 22px;
@@ -230,6 +245,134 @@ button {
 	border-radius: 4px;
 }
 
+.information {
+	&__row {
+		padding: 60px 0;
+	}
+
+	&__block {
+		& + & {
+			margin-top: 60px;
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+		color: $black;
+
+		& + .information__text {
+			margin-top: 30px;
+		}
+
+		& + .information__subtitle {
+			margin-top: 24px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
+		color: $black;
+
+		& + & {
+			margin-top: 20px;
+		}
+
+		& + .information__subtitle {
+			margin-top: 30px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 24px;
+		font-weight: 700;
+		color: $black;
+		margin-top: 30px;
+	}
+
+	&__list {
+		margin-top: 20px;
+	}
+
+	&__note {
+		font-size: 24px;
+		font-weight: 600;
+		color: #1E6D27;
+		line-height: 120%;
+		margin-top: 30px;
+	}
+
+	&__important {
+		margin-top: 32px;
+	}
+}
+
+.info-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	& + .information__text {
+		margin-top: 25px;
+	}
+
+	&__item {
+		color: $black;
+    line-height: 120%;
+		font-size: 18px;
+    padding-left: 5px;
+    margin-left: 22px;
+    position: relative;
+	}
+
+	&--disc {
+		.info-list__item::before {
+			content: "";
+			display: block;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: $black;
+			position: absolute;
+			top: 50%;
+			left: -10px;
+			transform: translateY(-50%);
+}
+	}
+
+	&--numbers {
+		padding-left: 5px;
+
+		.info-list__item {
+			list-style-type: auto;
+		}
+	}
+}
+
+.info-important {
+	background-color: #44B251;
+	border-radius: 12px;
+	padding: 35px 60px;
+
+	&__text {
+		font-size: 18px;
+		color: $white;
+		padding-left: 25px;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 61px;
+			background-color: $white;
+			position: absolute;
+			top: 5px;
+			left: 0;
+		}
+	}
+}
+
 
 
 /************* Media *****************************/
@@ -271,6 +414,42 @@ button {
 
 	.offer {
 		max-width: 100%;
+	}
+
+	.information {
+		&__row {
+			padding: 40px 0;
+		}
+
+		&__title {
+			font-size: 28px;
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+
+		&__note {
+			margin-top: 44px;
+			font-size: 22px;
+		}
+
+		&__block {
+			& + & {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.info-important {
+		padding: 34px 17px 30px 32px;
+		margin-left: -28px;
+	}
+
+	.info-list {
+		&__item {
+			font-size: 16px;
+		}
 	}
 }
 
