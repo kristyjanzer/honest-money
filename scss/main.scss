@@ -396,7 +396,7 @@ button {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		margin-right: 15px;
+		margin-right: 20px;
 	}
 
 	&__text {
@@ -557,7 +557,10 @@ button {
 
 @media (max-width: 600px) {
 	.info-calc-result {
-		max-width: 100%;
+		width: auto;
+		max-width: inherit;
+		margin-right: -20px;
+		margin-left: -20px;
 	}
 }
 
