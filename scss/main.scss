@@ -109,9 +109,10 @@ button {
 
 
 .header {
+	background-color: $white;
+
 	&__row {
 		padding: 50px 0 30px;
-		background-color: $white;
 	}
 }
 
@@ -306,6 +307,11 @@ button {
 	&__important {
 		margin-top: 32px;
 	}
+
+	&__table {
+		margin-top: 34px;
+		margin-bottom: 40px;
+	}
 }
 
 .info-list {
@@ -432,6 +438,66 @@ button {
 	}
 }
 
+.info-table {
+	display: table;
+	width: 100% !important;
+	table-layout: fixed !important;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0 !important;
+	line-height: 24px;
+
+	&__th,
+	&__td {
+		text-align: left;
+	}
+	
+	&__th {
+		padding: 18px;
+		font-size: 18px;
+		color: $text;
+		background-color: rgba(#8DDEE266, 0.4);
+		font-weight: 700;
+		border-right: 4px solid $white;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	&__td {
+		border-bottom: 2px solid #D7D7D7;
+		border-right: 4px solid $white;
+		font-size: 18px;
+		padding: 20px 18px 10px;
+
+		&:first-child {
+			text-align: left;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+.footer	{
+	background-color: rgba(#8EE3DCB3, 0.7);
+
+	&__row {
+		padding: 47px 0 100px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
+		color: $black;
+
+		& + & {
+			margin-top: 20px;
+		}
+	}
+}
 
 
 
@@ -487,6 +553,10 @@ button {
 		&__info {
 			margin-top: 40px;
 		}
+
+		&__text {
+			font-size: 16px;
+		}
 	}
 
 	.offers {
@@ -510,6 +580,10 @@ button {
 			font-size: 28px;
 		}
 
+		&__subtitle {
+			font-size: 22px;
+		}
+
 		&__text {
 			font-size: 16px;
 		}
@@ -523,6 +597,10 @@ button {
 			& + & {
 				margin-top: 40px;
 			}
+		}
+
+		&__table {
+			margin: 25px 0;
 		}
 	}
 
@@ -552,21 +630,72 @@ button {
 			margin-right: 0;
 		}
 	}
+
+	.info-calc-result {
+		padding: 23px 20px;
+	}
+
+	.info-table {
+		&__thead {
+			display: none;
+		}
+
+		&__tr {
+			margin-bottom: 10px;
+			display: block;
+			border: 2px solid rgba(#8DDEE266, 0.4);
+			padding: 0;
+		}
+
+		&__td {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: right;
+			font-size: 16px;
+			padding: 15px 10px;
+
+			&:before {
+				content: attr(data-label);
+				font-weight: 700;
+				margin-right: 10px;
+				text-align: left;
+			}
+
+			&:first-child {
+				text-align: right;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	.footer {
+		&__row {
+			padding: 54px 0 70px;
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+	}
 }
 
 
 @media (max-width: 600px) {
+	
+}
+
+
+@media (max-width: 400px) {
 	.info-calc-result {
 		width: auto;
 		max-width: inherit;
 		margin-right: -20px;
 		margin-left: -20px;
 	}
-}
-
-
-@media (max-width: 350px) {
-
 }
 
 
